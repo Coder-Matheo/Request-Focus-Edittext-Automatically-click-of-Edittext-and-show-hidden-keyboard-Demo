@@ -1,0 +1,32 @@
+package com.requestfocusedittext_automaticllyclickofedittextandshowhiddenkeyboarddemo;
+
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+
+public class A_Fragment extends Fragment {
+
+    Button jump_button;
+
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = getLayoutInflater().inflate(R.layout.fragment_a_layout, container, false);
+        jump_button = view.findViewById(R.id.jump_button);
+
+        jump_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                B_Fragment b_fragment = new B_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.main_container, b_fragment).commit();
+            }
+        });
+        return view;
+    }
+}

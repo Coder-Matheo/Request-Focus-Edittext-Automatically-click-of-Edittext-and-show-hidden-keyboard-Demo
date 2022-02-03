@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="30dp">
+
+        <EditText
+            android:id="@+id/request_focus_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:textSize="40sp"
+            android:textColor="@color/purple_700"/>
+
+        <Button
+            android:id="@+id/hide_auto_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Auto Hide Key" />
+    </LinearLayout>
+</LinearLayout>
